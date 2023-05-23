@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: peeyushkdotnettestapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: peeyushkdotnettestapp
+  template:
+    metadata:
+      labels:
+        app: peeyushkdotnettestapp 
+    spec:
+      containers:
+        - name: peeyushkdotnettestapp 
+          image: test679.azurecr.io/peeyushkdotnettestapp
+          ports:
+          - containerPort: 80
